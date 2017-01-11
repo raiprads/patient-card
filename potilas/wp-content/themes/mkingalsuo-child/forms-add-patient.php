@@ -93,8 +93,8 @@ get_header(); ?>
 
                             <hr/>
 
-                            <button type="submit" class="btn btn-primary">Save</button>
-                            <button type="reset" class="btn btn-default">Reset</button>
+                            <button type="submit" class="btn btn-primary" id="btn-add-new" >Save</button>
+                            <button type="reset" class="btn btn-default" >Reset</button>
 
                         </div>
 
@@ -111,5 +111,6 @@ get_header(); ?>
 
         </div>
         <!-- /#page-wrapper -->
+
 
 <?php get_footer(); ?>
