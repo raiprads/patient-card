@@ -17,6 +17,8 @@ get_header(); ?>
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
+
+
                         <h1 class="page-header">
                             <i class="fa fa-edit"></i> Add New Patient
                         </h1>
@@ -34,7 +36,8 @@ get_header(); ?>
 
                 <div class="row">
 
-                    <form role="form">
+                    <form id="form-add-new" method="post">
+                    <input type="hidden" id="mynonce" name="mynonce" value="<?php echo wp_create_nonce("add_new_patient_nonce"); ?>">
                     
                         <div class="col-lg-6">
 
@@ -94,7 +97,7 @@ get_header(); ?>
                             <hr/>
 
                             <button type="submit" class="btn btn-primary" id="btn-add-new" >Save</button>
-                            <button type="reset" class="btn btn-default" >Reset</button>
+                            <button type="reset" class="btn btn-default"  >Reset</button>
 
                         </div>
 

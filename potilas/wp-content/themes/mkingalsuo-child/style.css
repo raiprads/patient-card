@@ -4,3 +4,8 @@
  Template:       mkingalsuo
  Version:        1.0.0
 */
+
+.error {
+	font-weight: normal;
+	color: red;
+}

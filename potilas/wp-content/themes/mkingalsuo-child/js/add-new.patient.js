@@ -1,29 +1,74 @@
 jQuery(document).ready( function() {
 
-   jQuery("#btn-add-new").click( function() {
-      
-	    var txtpostinumero = jQuery("#txtpostinumero").val();
+ //   	jQuery("#btn-add-new").click(function( event ) {
+	// 	alert( "Handler for .submit() called." );
 
-	    console.log(txtpostinumero);
 
-	    jQuery.ajax({
-	        type : "POST",
-	        dataType : "html",
-	        url : doAjax.ajaxurl,
-	        data : {
-	        	txtpostinumero: txtpostinumero
-	        },
-	        success: function(data) {
-	            alert(data);
-	        },
-	        error: function (data, status, error) {
-		        alert(data.responseText);
-		    }
-	    });
+	// });
 
-	    return false;  
 
-   });
+	jQuery("#form-add-new").validate({
+		rules: {
+			txthktunnus: "required",
+			// txtsukunimi: "required",
+			// txtetunimi: "required",
+			// txtpnumero: {
+		 //      required: true,
+		 //      digits: true
+		 //    },
+		 //    txtsposti: {
+			// 	required: true,
+			// 	email: true
+			// },
+			// txtkadunnimi: "required",
+			// txtpaikkakunta: "required",
+			// txtpostinumero: {
+			// 	required: true,
+			// 	minlength: 5,
+			// 	maxlength: 5
+			// }
+		},
+		messages: {
+			txthktunnus: "Please enter your henkilötunnus",
+			// txtsukunimi: "Please enter your sukunimi",
+			// txtetunimi: "Please enter your etunimi",
+			// txtpnumero: {
+			// 	required: "Please enter your puhelinnumero",
+		 //      	digits: "Your puhelinnumero must consist of digits"
+			// },
+			// txtsposti: "Please enter a valid sähköposti",
+			// txtkadunnimi: "Please enter your kadunnimi",
+			// txtpaikkakunta: "Please enter your paikkakunta",
+			// txtpostinumero: "Please enter your postinumero"
+		},
+		submitHandler: function(form) {
+		    //form.submit();
+			var nonce = jQuery('#mynonce').val();
+
+			jQuery.ajax({
+		        type : "post",
+		        dataType : "json",
+		        url : doAjax.ajaxurl,
+		        data : {action: "add_new_patient", nonce: nonce},
+		        success: function(response) {
+		            if(response.type == "success") {
+		               alert(response.vote_count);
+		            }
+		            else {
+		               alert("Your vote could not be added");
+		            }
+		        },
+		        error: function (xhr, ajaxOptions, thrownError) {
+			        alert(xhr.status);
+			        alert(xhr.responseText);
+			    }
+		    }); 
+
+			event.preventDefault();
+
+		}
+	});
+
 
 
 
