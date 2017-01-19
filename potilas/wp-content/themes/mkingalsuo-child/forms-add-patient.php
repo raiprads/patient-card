@@ -8,7 +8,9 @@
  * @since mkingalsuo-child 1.0
  */
 
-get_header(); ?>
+get_header();
+
+?>
 
         <div id="page-wrapper">
 
@@ -24,7 +26,7 @@ get_header(); ?>
                         </h1>
                         <ol class="breadcrumb">
                             <li>
-                                <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
+                                <i class="fa fa-dashboard"></i>  <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Dashboard</a>
                             </li>
                             <li class="active">
                                 <i class="fa fa-edit"></i> Add New Patient
@@ -41,7 +43,7 @@ get_header(); ?>
                     
                         <div class="col-lg-6">
 
-                            <h3>Personal Information</h3>
+                            <h3>Henkilötiedot</h3>
 
                             <div class="form-group col-md-12 col-lg-12">
                                 <label>Henkilötunnus</label>
@@ -68,16 +70,39 @@ get_header(); ?>
                                 <input class="form-control" id="txtsposti" name="txtsposti">
                             </div>
 
-                            <h3>Address</h3>
+                            <h3>Osoite</h3>
 
                             <div class="form-group col-md-12 col-lg-12">
-                                <label>Kadunnimi</label>
-                                <input class="form-control" id="txtkadunnimi" name="txtkadunnimi">
+                                <label>Kotiosoite</label>
+                                <input class="form-control" id="txtkotiosoite" name="txtkotiosoite">
                             </div>
 
                             <div class="form-group col-md-6 col-lg-6">
-                                <label>Paikkakunta</label>
-                                <input class="form-control" id="txtpaikkakunta" name="txtpaikkakunta">
+                                <label>Postitoimipaikka</label>
+
+                                <select class="form-control" id="drppostitoimipaikka" name="drppostitoimipaikka">
+                                <?php 
+
+                                    // Open the file
+                                    $filename = __DIR__ . '/inc/kunnat.txt';
+                                    $default_kunta = 'Kangasala';
+
+                                    $fp = @fopen($filename, 'r'); 
+
+                                    // Add each line to an array
+                                    if ($fp) {
+                                       $array = explode("\n", fread($fp, filesize($filename)));
+                                    }
+
+                                    for($i=0; $i < sizeof($array); $i++) {
+                                        if(trim($array[$i]) != $default_kunta){
+                                            echo '<option value="'. $array[$i] .'">'. $array[$i] .'</option>';
+                                        }else {
+                                            echo '<option value="'. $array[$i] .'" selected = "selected">'. $array[$i] .'</option>';
+                                        }
+                                    }
+                                ?>
+                                </select>
                             </div>
 
                             <div class="form-group col-md-6 col-lg-6">

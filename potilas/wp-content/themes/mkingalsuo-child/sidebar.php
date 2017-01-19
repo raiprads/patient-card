@@ -7,7 +7,10 @@
             <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-user"></i> Patients <i class="fa fa-fw fa-caret-down"></i></a>
             <ul id="demo" class="collapse">
                 <li>
-                    <a href="<?php echo home_url(); ?>/add-new-patient/">Add New <i class="fa fa-fw fa-plus"></i></a>
+                    <a href="<?php echo home_url(); ?>/patient/">Show all <i class="fa fa-fw fa-users"></i></a>
+                </li>
+                <li>
+                    <a href="<?php echo home_url(); ?>/add-new-patient/">Add new <i class="fa fa-fw fa-plus"></i></a>
                 </li>
                 <li>
                     <a href="#">Search <i class="fa fa-fw fa-search"></i></a>
