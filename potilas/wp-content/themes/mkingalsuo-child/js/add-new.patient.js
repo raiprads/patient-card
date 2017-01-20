@@ -1,12 +1,5 @@
 jQuery(document).ready( function() {
 
- //   	jQuery("#btn-add-new").click(function( event ) {
-	// 	alert( "Handler for .submit() called." );
-
-
-	// });
-
-
 	jQuery("#form-add-new").validate({
 		rules: {
 			txthktunnus: "required",

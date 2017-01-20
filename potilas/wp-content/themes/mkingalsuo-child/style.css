@@ -15,3 +15,11 @@
   padding: 15px;
   border-radius: 4px;
 }
+
+.comment-lists ul{
+	padding: 0px;
+}
+
+ul li.comment {
+	list-style: none;
+}
