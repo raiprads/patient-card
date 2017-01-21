@@ -66,6 +66,7 @@ add_action( 'wp_ajax_add_new_patient', 'add_new_patient' );
 
 include_once("functions/patient-teeth.php");
 add_action( 'wp_ajax_view_patient_teeth', 'view_patient_teeth' );
+add_action( 'wp_ajax_save_patient_teeth_values', 'save_patient_teeth_values' );
 
 // Custom Comments Callback
 function html5blankcomments_revised($comment, $args, $depth)

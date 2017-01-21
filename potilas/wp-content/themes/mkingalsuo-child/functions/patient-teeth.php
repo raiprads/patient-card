@@ -11,11 +11,19 @@ function view_patient_teeth() {
 
     $data = $_REQUEST;
 
-    $canvas = @imagecreate(511, 819)
+    $canvas = @imagecreatetruecolor(511, 819)
     	or die("Cannot Initialize new GD image stream");
-    //$canvas = imagecreatetruecolor(511, 819);
+    imagealphablending($canvas, true);
+    imagesavealpha($canvas, true);
+
 	$main_teeth = imagecreatefrompng( __DIR__ . '/teeth/teeth.png');
-	imagecopy($canvas, $main_teeth, 0, 0, 0, 0, 511, 819);
+    imagecopy($canvas, $main_teeth, 0, 0, 0, 0, 511, 819);
+
+    $insert_11 = imagecreatefrompng( __DIR__ . '/teeth/pcs/teeth11.png');
+    imagecopy($canvas,$insert_11,180,-5,0,0,imagesx($insert_11), imagesy($insert_11));
+
+    imagealphablending($canvas, false);
+    imagesavealpha($canvas, true);
 
 	ob_start();
 	imagepng($canvas);
@@ -36,6 +44,24 @@ function view_patient_teeth() {
 
    	die();
 
+}
+
+function save_patient_teeth_values() {
+
+    if ( !wp_verify_nonce( $_REQUEST['nonce'], "save_patient_teeth_values_nonce")) {
+        exit("No naughty business please!");
+    }
+
+    $data = $_REQUEST;
+
+    if(!empty($data['teethval'])) {
+        $teethval = substr($data['teethval'], 0, -1);
+        $arr_teeth = explode(',', $teethval);
+    } 
+
+    print_r($arr_teeth);
+
+    die();
 }
 
 ?>
