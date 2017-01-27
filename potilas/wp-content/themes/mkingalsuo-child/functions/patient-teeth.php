@@ -158,7 +158,7 @@ function draw_tooth($canvas, $tooth_num, $text, $tooth_x, $tooth_y, $text_x, $te
     imagecopy($canvas,$insert_tooth,$tooth_x,$tooth_y,0,0,imagesx($insert_tooth), imagesy($insert_tooth));
 
     // Allocate A Color For The Text
-    $white = imagecolorallocate($canvas, 255, 0, 0);
+    $white = imagecolorallocate($canvas, 255, 255, 255);
     imagettftext($canvas, 20, 0, $text_x, $text_y, $white, $font_path, $text);
 
 }

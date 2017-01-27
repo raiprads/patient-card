@@ -1,132 +1,107 @@
 <form id="form-add-new" method="post" class="form-horizontal">
 <input type="hidden" id="mynonce" name="mynonce" value="<?php echo wp_create_nonce("add_new_patient_nonce"); ?>">
 
-    <!-- start Ekstraoraalitutkimus -->
+    <!-- start Esitiedot -->
     <div class="col-lg-6">
 
-        <h3>Ekstraoraalitutkimus</h3>
+        <h3>Esitiedot</h3>
 
         <div class="form-group">
             <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chksuupielet" name="chksuupielet" data-size="mini" data-toggle="toggle" data-on="Muutoksia" data-off="Terveet">
+                <input type="checkbox" id="chkyliherkkyys" name="chkyliherkkyys" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
             </div>
-            <label class="col-md-10 col-lg-10">Suupielet</label>
-            <div class="col-md-2 col-lg-2"></div>
-            <div class="col-md-8 col-lg-8">
-                <input class="form-control" id="txtsuupielet" name="txtsuupielet">
-            </div>
+            <label class="col-md-10 col-lg-10">Yliherkkyys</label>
         </div>
 
         <div class="form-group">
             <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkhuulet" name="chkhuulet" data-size="mini" data-toggle="toggle" data-on="Muutoksia" data-off="Terveet">
+                <input type="checkbox" id="chkreuma" name="chkreuma" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
             </div>
-            <label class="col-md-10 col-lg-10">Huulet</label>
+            <label class="col-md-10 col-lg-10">Reuma</label>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-2 col-lg-2">
+                <input type="checkbox" id="chksjverisuonisairaus" name="chksjverisuonisairaus" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
+            </div>
+            <label class="col-md-10 col-lg-10">Sydän- ja verisuonisairaus</label>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-2 col-lg-2">
+                <input type="checkbox" id="chkvjverenvuototaudit" name="chkvjverenvuototaudit" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
+            </div>
+            <label class="col-md-10 col-lg-10">Veri- ja verenvuototaudit</label>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-2 col-lg-2">
+                <input type="checkbox" id="chkpsadehoito" name="chkpsadehoito" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
+            </div>
+            <label class="col-md-10 col-lg-10">Päänalueen sädehoito</label>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-2 col-lg-2">
+                <input type="checkbox" id="chkepilepsia" name="chkepilepsia" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
+            </div>
+            <label class="col-md-10 col-lg-10">Epilepsia</label>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-2 col-lg-2">
+                <input type="checkbox" id="chkttauti" name="chkttauti" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
+            </div>
+            <label class="col-md-10 col-lg-10">Tarttuva tauti</label>
             <div class="col-md-2 col-lg-2"></div>
             <div class="col-md-8 col-lg-8">
-                <input class="form-control" id="txthuulet" name="txthuulet">
+                <input class="form-control" id="txtttauti" name="txtttauti">
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkimusolmukkeet" name="chkimusolmukkeet" data-size="mini" data-toggle="toggle" data-on="Muutoksia" data-off="Terveet">
+                <input type="checkbox" id="chkmsairaudet" name="chkmsairaudet" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
             </div>
-            <label class="col-md-10 col-lg-10">Imusolmukkeet</label>
+            <label class="col-md-10 col-lg-10">Muut sairaudet</label>
             <div class="col-md-2 col-lg-2"></div>
             <div class="col-md-8 col-lg-8">
-                <input class="form-control" id="txtimusolmukkeet" name="txtimusolmukkeet">
+                <input class="form-control" id="txtmsairaudet" name="txtmsairaudet">
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkpoimut" name="chkpoimut" data-size="mini" data-toggle="toggle" data-on="On" data-off="Ei">
+                <input type="checkbox" id="chkmsairaudet" name="chklaakitys" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
             </div>
-            <label class="col-md-10 col-lg-10">Poimut</label>
+            <label class="col-md-10 col-lg-10">Lääkitys</label>
             <div class="col-md-2 col-lg-2"></div>
             <div class="col-md-8 col-lg-8">
-                <input class="form-control" id="txtpoimut" name="txtpoimut">
+                <input class="form-control" id="txtlaakitys" name="txtlaakitys">
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkarvet" name="chkarvet" data-size="mini" data-toggle="toggle" data-on="On" data-off="Ei">
+                <input type="checkbox" id="chksyljeneritys" name="chksyljeneritys" data-size="mini" data-toggle="toggle" data-on="Alentunut" data-off="Normaali">
             </div>
-            <label class="col-md-10 col-lg-10">Arvet</label>
-            <div class="col-md-2 col-lg-2"></div>
-            <div class="col-md-8 col-lg-8">
-                <input class="form-control" id="txtarvet" name="txtarvet">
-            </div>
-        </div>
-
-        <div class="form-group col-md-12 col-lg-12">
-            <label>Muuta huomioitavaa</label>
-            <input class="form-control" id="txtmhuomioitavaa" name="txtmhuomioitavaa">
-        </div>
-
-        <div class="form-group col-md-12 col-lg-12">
-            
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th><h4>Leukanivelet</h4></th>
-                        <th><h4>Oikea</h4></th>
-                        <th><h4>Vasen</h4></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-                    <tr>
-                        <td><label>Liikkuvus</label></td>
-                        <td>
-                            <input type="checkbox" id="chkliikkuvuso" name="chkliikkuvuso" data-size="mini" data-toggle="toggle" data-on="Rajoitt." data-off="Vap">
-                        </td>
-                        <td>
-                            <input type="checkbox" id="chkliikkuvusv" name="chkliikkuvusv" data-size="mini" data-toggle="toggle" data-on="Rajoitt." data-off="Vap">
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td><label>Aristusta</label></td>
-                        <td>
-                            <input type="checkbox" id="chkaristustao" name="chkaristustao" data-size="mini" data-toggle="toggle" data-on="Rajoitt." data-off="Vap">
-                        </td>
-                        <td>
-                            <input type="checkbox" id="chkaristustav" name="chkaristustav" data-size="mini" data-toggle="toggle" data-on="Rajoitt." data-off="Vap">
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td><label>Rahinaa, naksahtelua</label></td>
-                        <td>
-                            <input type="checkbox" id="chkrnaksahteluao" name="chkrnaksahteluao" data-size="mini" data-toggle="toggle" data-on="Rajoitt." data-off="Vap">
-                        </td>
-                        <td>
-                            <input type="checkbox" id="chkrnaksahteluav" name="chkrnaksahteluav" data-size="mini" data-toggle="toggle" data-on="Rajoitt." data-off="Vap">
-                        </td>
-                    </tr>
-
-                </tbody>
-            </table>
-
+            <label class="col-md-10 col-lg-10">Syljeneritys</label>
         </div>
                     
 
     </div>
-    <!-- end Ekstraoraalitutkimus -->
+    <!-- end Esitiedot -->
 
-    <!-- start Intraoraalitutkimus -->
+    <!-- start Aikaisempi Hampaiden Hoito -->
     <div class="col-lg-6">
 
-        <h3>Intraoraalitutkimus</h3>
+        <h3>Aikaisempi Hampaiden Hoito</h3>
 
-        <div class="form-group">
+        <div class="form-group col-md-12 col-lg-12">
             <textarea class="form-control" id="txtaahhoito" name="txtaahhoito" rows="3" class="col-md-12 col-lg-12"></textarea>
         </div>
 
-        <div class="form-group">
+        <div class="form-group col-md-12 col-lg-12">
             <label>Vuosi</label>
             <input class="form-control" id="txtvuosi" name="txtvuosi">
         </div>
@@ -189,7 +164,7 @@
             <label class="col-md-10 col-lg-10">Tyytyväinen pureskelukykyyn</label>
         </div>
 
-        <div class="form-group">
+        <div class="form-group col-md-12 col-lg-12">
             <label>Havainnot entisistä proteeseistä</label>
             <textarea class="form-control" id="txtaheproteeseista" name="txtaheproteeseista" rows="3" class="col-md-12 col-lg-12"></textarea>
         </div>
@@ -231,7 +206,7 @@
         
 
     </div>
-    <!-- end Intraoraalitutkimus -->
+    <!-- end Aikaisempi Hampaiden Hoito -->
 
     
     <div class="col-lg-12">

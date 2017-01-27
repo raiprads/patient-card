@@ -34,7 +34,7 @@ $hash = get_the_content();
 		                <th>Puhelinnumero</th>
 		                <td>
 		                	<?php
-		                		$pnumero = get_post_meta( get_the_ID(), 'patient_pnumero', true ); 
+		                		$pnumero = get_post_meta( get_the_ID(), 'patient_puhkotiin', true ); 
 			                    echo decrypt_data($pnumero, $hash);
 		                	?>
 		                </td>
@@ -90,6 +90,47 @@ $hash = get_the_content();
 	 	</div>
 	</div>
 	<!-- end osoite -->
+
+	<!-- start työpaikka -->
+	<div class="panel panel-default">
+	  	<div class="panel-heading">Työpaikka</div>
+	 	<div class="panel-body">
+	 		
+	 		<table class="table">
+				<tbody>
+					<tr> 
+		                <th>Ammatti</th>
+		                <td>
+		                	<?php
+		                		$ammatti = get_post_meta( get_the_ID(), 'patient_ammatti', true ); 
+			                    echo decrypt_data($ammatti, $hash);
+		                	?>
+		                </td>
+		            </tr>
+		            <tr> 
+		                <th>Osoite</th>
+		                <td>
+		                	<?php
+		                		$tyoosoite = get_post_meta( get_the_ID(), 'patient_tyoosoite', true ); 
+			                    echo decrypt_data($tyoosoite, $hash);
+		                	?>
+		                </td>
+		            </tr>
+		            <tr> 
+		                <th>Puh. työhön</th>
+		                <td>
+		                	<?php
+		                		$puhtyohon = get_post_meta( get_the_ID(), 'patient_puhtyohon', true ); 
+			                    echo decrypt_data($puhtyohon, $hash);
+		                	?>
+		                </td>
+		            </tr>
+				</tbody>
+			</table>
+
+	 	</div>
+	</div>
+	<!-- end työpaikka -->
 
 
 

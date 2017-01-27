@@ -30,12 +30,14 @@ function add_new_patient()
 	add_post_meta( $post_id, 'patient_hktunnus', encrypt_data($data['txthktunnus'], $hash) );
 	add_post_meta( $post_id, 'patient_sukunimi', $lastname ); 
 	add_post_meta( $post_id, 'patient_etunimi', $firstname ); 
-	add_post_meta( $post_id, 'patient_pnumero', encrypt_data($data['txtpnumero'], $hash) );  
+	add_post_meta( $post_id, 'patient_puhkotiin', encrypt_data($data['txtpuhkotiin'], $hash) );  
 	add_post_meta( $post_id, 'patient_sposti', encrypt_data($data['txtsposti'], $hash) );  
 	add_post_meta( $post_id, 'patient_kotiosoite', encrypt_data(ucwords($data['txtkotiosoite']), $hash) );
 	add_post_meta( $post_id, 'patient_postitoimipaikka', $data['drppostitoimipaikka'] );
-	add_post_meta( $post_id, 'patient_postinumero', encrypt_data($data['txtpostinumero'], $hash) );    
-
+	add_post_meta( $post_id, 'patient_postinumero', encrypt_data($data['txtpostinumero'], $hash) );
+	add_post_meta( $post_id, 'patient_ammatti', encrypt_data($data['txtammatti'], $hash) );
+	add_post_meta( $post_id, 'patient_tyoosoite', encrypt_data($data['txttyoosoite'], $hash) );
+	add_post_meta( $post_id, 'patient_puhtyohon', encrypt_data($data['txtpuhtyohon'], $hash) );    
 
     if(!empty($post_id)) {
 

@@ -46,39 +46,39 @@ get_header();
                             <h3>Henkilötiedot</h3>
 
                             <div class="form-group col-md-12 col-lg-12">
-                                <label>Henkilötunnus</label>
+                                <label class="required">Henkilötunnus</label>
                                 <input class="form-control" id="txthktunnus" name="txthktunnus">
                             </div>
 
                             <div class="form-group col-md-6 col-lg-6">
-                                <label>Sukunimi</label>
+                                <label class="required">Sukunimi</label>
                                 <input class="form-control" id="txtsukunimi" name="txtsukunimi">
                             </div>
 
                             <div class="form-group col-md-6 col-lg-6">
-                                <label>Etunimi</label>
+                                <label class="required">Etunimi</label>
                                 <input class="form-control" id="txtetunimi" name="txtetunimi">
                             </div>
 
                             <div class="form-group col-md-12 col-lg-12">
-                                <label>Puhelinnumero</label>
-                                <input class="form-control" id="txtpnumero" name="txtpnumero">
+                                <label class="required">Puh. kotiin</label>
+                                <input class="form-control" id="txtpuhkotiin" name="txtpuhkotiin">
                             </div>
 
                             <div class="form-group col-md-12 col-lg-12">
-                                <label>Sähköposti</label>
+                                <label >Sähköposti</label>
                                 <input class="form-control" id="txtsposti" name="txtsposti">
                             </div>
 
                             <h3>Osoite</h3>
 
                             <div class="form-group col-md-12 col-lg-12">
-                                <label>Kotiosoite</label>
+                                <label class="required">Kotiosoite</label>
                                 <input class="form-control" id="txtkotiosoite" name="txtkotiosoite">
                             </div>
 
                             <div class="form-group col-md-6 col-lg-6">
-                                <label>Postitoimipaikka</label>
+                                <label class="required">Postitoimipaikka</label>
 
                                 <select class="form-control" id="drppostitoimipaikka" name="drppostitoimipaikka">
                                 <?php 
@@ -106,13 +106,26 @@ get_header();
                             </div>
 
                             <div class="form-group col-md-6 col-lg-6">
-                                <label>Postinumero</label>
+                                <label class="required">Postinumero</label>
                                 <input class="form-control" id="txtpostinumero" name="txtpostinumero">
                             </div>
 
-                            <div class="form-group">
-                                
-                            </div>                        
+                            <h3>Työpaikka</h3>
+
+                            <div class="form-group col-md-12 col-lg-12">
+                                <label>Ammatti</label>
+                                <input class="form-control" id="txtammatti" name="txtammatti">
+                            </div>
+
+                            <div class="form-group col-md-12 col-lg-12">
+                                <label>Osoite</label>
+                                <input class="form-control" id="txttyoosoite" name="txttyoosoite">
+                            </div>
+
+                            <div class="form-group col-md-12 col-lg-12">
+                                <label>Puh. työhön</label>
+                                <input class="form-control" id="txtpuhtyohon" name="txtpuhtyohon">
+                            </div>                       
 
                         </div>
 
@@ -121,8 +134,8 @@ get_header();
 
                             <hr/>
 
-                            <button type="submit" class="btn btn-primary" id="btn-add-new" >Save</button>
-                            <button type="reset" class="btn btn-default"  >Reset</button>
+                            <button type="submit" class="btn btn-lg btn-primary" id="btn-add-new" >Save</button>
+                            <button type="reset" class="btn btn-lg btn-default"  >Reset</button>
 
                         </div>
 

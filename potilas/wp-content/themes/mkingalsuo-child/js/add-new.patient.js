@@ -5,15 +5,14 @@ jQuery(document).ready( function() {
 			txthktunnus: "required",
 			txtsukunimi: "required",
 			txtetunimi: "required",
-			txtpnumero: {
+			txtpuhkotiin: {
 		      required: true,
 		      digits: true
 		    },
 		    txtsposti: {
-				required: true,
 				email: true
 			},
-			txtkadunnimi: "required",
+			txtkotiosoite: "required",
 			txtpostinumero: {
 				required: true,
 				minlength: 5,
@@ -24,9 +23,9 @@ jQuery(document).ready( function() {
 			txthktunnus: "Please enter your henkilötunnus",
 			txtsukunimi: "Please enter your sukunimi",
 			txtetunimi: "Please enter your etunimi",
-			txtpnumero: {
-				required: "Please enter your puhelinnumero",
-		      	digits: "Your puhelinnumero must consist of digits"
+			txtpuhkotiin: {
+				required: "Please enter your puh. kotiin",
+		      	digits: "Your puh. kotiin must consist of digits"
 			},
 			txtsposti: "Please enter a valid sähköposti",
 			txtkotiosoite: "Please enter your kotiosoite",
@@ -40,12 +39,15 @@ jQuery(document).ready( function() {
 			var txthktunnus = jQuery('#txthktunnus').val();
 			var txtsukunimi = jQuery('#txtsukunimi').val();
 			var txtetunimi = jQuery('#txtetunimi').val();
-			var txtpnumero = jQuery('#txtpnumero').val();
+			var txtpuhkotiin = jQuery('#txtpuhkotiin').val();
 			var txtsposti = jQuery('#txtsposti').val();
 			var txtkotiosoite = jQuery('#txtkotiosoite').val();
 			var drppostitoimipaikka = jQuery('#drppostitoimipaikka').val();
 			var txtpostinumero = jQuery('#txtpostinumero').val();
-
+			var txtammatti = jQuery('#txtammatti').val();
+			var txttyoosoite = jQuery('#txttyoosoite').val();
+			var txtpuhtyohon = jQuery('#txtpuhtyohon').val();
+			
 			jQuery.ajax({
 		        type : "post",
 		        dataType : "json",
@@ -56,11 +58,14 @@ jQuery(document).ready( function() {
 		        	txthktunnus: txthktunnus,
 		        	txtsukunimi: txtsukunimi,
 		        	txtetunimi: txtetunimi,
-		        	txtpnumero: txtpnumero,
+		        	txtpuhkotiin: txtpuhkotiin,
 		        	txtsposti: txtsposti,
 		        	txtkotiosoite: txtkotiosoite,
 		        	drppostitoimipaikka: drppostitoimipaikka,
-		        	txtpostinumero: txtpostinumero
+		        	txtpostinumero: txtpostinumero,
+		        	txtammatti: txtammatti,
+		        	txttyoosoite: txttyoosoite,
+		        	txtpuhtyohon: txtpuhtyohon
 		        },
 		        success: function(response) {
 		            if(response.type == "success") {

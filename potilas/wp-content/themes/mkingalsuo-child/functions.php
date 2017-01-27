@@ -8,6 +8,10 @@ function theme_enqueue_styles() {
         get_stylesheet_directory_uri() . '/css/bootstrap.min.css'
     );
 
+    wp_enqueue_style( 'bootstrap-toggle-style', 
+        get_stylesheet_directory_uri() . '/css/bootstrap-toggle.min.css'
+    );
+
     wp_enqueue_style( 'sb-admin', 
         get_stylesheet_directory_uri() . '/css/sb-admin.css'
     );
@@ -35,6 +39,9 @@ function theme_enqueue_scripts() {
     wp_register_script('bootstrap-script', get_stylesheet_directory_uri(). '/js/bootstrap.min.js', array('jquery'), '1.1');
     wp_enqueue_script('bootstrap-script');
 
+    wp_register_script('bootstrap-toggle-script', get_stylesheet_directory_uri(). '/js/bootstrap-toggle.min.js', array('jquery'), '1.1');
+    wp_enqueue_script('bootstrap-toggle-script');
+
     wp_register_script('jquery-validate-script', get_stylesheet_directory_uri(). '/js/jquery.validate.min.js', array('jquery'), '1.1');
     wp_enqueue_script('jquery-validate-script');
 
@@ -47,9 +54,10 @@ function theme_enqueue_scripts() {
     }elseif(is_single()) {
         
         //get selected tabs
-        if($_GET['t'] == 3){
-            wp_register_script('patient-ajax', get_stylesheet_directory_uri(). '/js/view.patient.js', array('jquery'), '1.1');
-        }
+        $selected_tab = $_GET['t'];
+        
+        wp_register_script('patient-ajax', get_stylesheet_directory_uri(). '/js/view.patient-t'. $selected_tab .'.js', array('jquery'), '1.1');
+
     }
 
     wp_localize_script( 'patient-ajax', 'doAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));        
