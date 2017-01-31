@@ -123,109 +123,246 @@
         <h3>Intraoraalitutkimus</h3>
 
         <div class="form-group">
-            <textarea class="form-control" id="txtaahhoito" name="txtaahhoito" rows="3" class="col-md-12 col-lg-12"></textarea>
-        </div>
-
-        <div class="form-group">
-            <label>Vuosi</label>
-            <input class="form-control" id="txtvuosi" name="txtvuosi">
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkaproteesit" name="chkaproteesit" data-size="mini" data-toggle="toggle" data-on="On" data-off="Ei">
-            </div>
-            <label class="col-md-10 col-lg-10">Aikaisemmat proteesit</label>
-        </div>
-
-        <div class="form-group">
             <div class="col-md-12 col-lg-12">
-                <h4>Millaiset</h4>
+                <label>Suuhygienia</label>
             </div>
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkmillaisetyl" name="chkmillaisetyl" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
-            </div>
-            <label class="col-md-10 col-lg-10">YL</label>
-
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkmillaisetal" name="chkmillaisetal" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
-            </div>
-            <label class="col-md-10 col-lg-10">AL</label>
-        </div>
-
-        <div class="form-group col-md-4 col-lg-4">
+            
             <div class="col-md-12 col-lg-12">
-                <label>Valmistettu v.</label>
-                <input class="form-control" id="txtvalmistettuv" name="txtvalmistettuv">
-            </div>
-        </div>
-
-        <div class="form-group col-md-4 col-lg-4">
-            <div class="col-md-12 col-lg-12">
-                <label>Pohjattu v.</label>
-                <input class="form-control" id="txtpohjattuv" name="txtpohjattuv">
-            </div>
-        </div>
-
-        <div class="form-group col-md-4 col-lg-4">
-            <div class="col-md-12 col-lg-12">
-                <label>Korjattu v.</label>
-                <input class="form-control" id="txtkorjattuv" name="txtkorjattuv">
+                <label class="radio-inline">
+                  <input type="radio" name="inlineSuuhygieniaOptions" id="rdosuuhygieniah" value="hyvää"> Hyvä
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineSuuhygieniaOptions" id="rdosuuhygieniak" value="kohtalainen"> Kohtalainen
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineSuuhygieniaOptions" id="rdosuuhygieniahu" value="option3"> Huono
+                </label>
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-12 col-lg-12">
-                <h4>Potilaan mielipide proteeseitaan</h4>
+                <label>Limakalvot</label>
             </div>
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkpmptulkonakoon" name="chkpmptulkonakoon" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
-            </div>
-            <label class="col-md-10 col-lg-10">Tyytyväinen ulkonäköön</label>
-
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkpmptpureskelukykyyn" name="chkpmptpureskelukykyyn" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
-            </div>
-            <label class="col-md-10 col-lg-10">Tyytyväinen pureskelukykyyn</label>
-        </div>
-
-        <div class="form-group">
-            <label>Havainnot entisistä proteeseistä</label>
-            <textarea class="form-control" id="txtaheproteeseista" name="txtaheproteeseista" rows="3" class="col-md-12 col-lg-12"></textarea>
-        </div>
-
-        <div class="form-group">
             <div class="col-md-12 col-lg-12">
-                <h4>Purenta</h4>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineLimakalvotOptions" id="rdolimakalvott" value="hyvää"> Terveet
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineLimakalvotOptions" id="rdolimakalvotm" value="kohtalainen"> Muutoksia
+                </label>
             </div>
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkpurentaant" name="chkpurentaant" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
-            </div>
-            <label class="col-md-10 col-lg-10">Ant.</label>
-
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkpurentapost" name="chkpurentapost" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
-            </div>
-            <label class="col-md-10 col-lg-10">Post.</label>
-
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkpurentaristipur" name="chkpurentaristipur" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
-            </div>
-            <label class="col-md-10 col-lg-10">Ristipur.</label>
-        </div>
-
-        <div class="form-group col-md-6 col-lg-6">
-            <div class="col-md-12 col-lg-12">
-                <label>Vapaaväli mm.</label>
-                <input class="form-control" id="txtvapaavalimm" name="txtvapaavalimm">
+            <div class="col-md-12 col-lg-12 top10">
+                <input class="form-control" id="txtlimakalvotm" name="txtlimakalvotm">
             </div>
         </div>
 
-        <div class="form-group col-md-6 col-lg-6">
-            <div class="col-md-12 col-lg-12">
-                <label>Purentakorkeus mm.</label>
-                <input class="form-control" id="txtpurentakorkeusmm" name="txtpurentakorkeusmm">
-            </div>
+        <div class="form-group col-md-12 col-lg-12">
+            
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th><h4>Proteesialusta</h4></th>
+                        <th><h4>YL</h4></th>
+                        <th><h4>AL</h4></th>
+                        <th><h4>&nbsp;</h4></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td><label>Vähäinen ienvallin resortio</label></td>
+                        <td>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="chkvahaineniryl" id="chkvahaineniryl">
+                              </label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="chkvahaineniral" id="chkvahaineniral">
+                              </label>
+                            </div>
+                        </td>
+                        <td>
+                            <input class="form-control" id="txtvahainenir" name="txtvahainenir">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Normaali ienvallin resortio</label></td>
+                        <td>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="chknormaaliiryl" id="chknormaaliiryl">
+                              </label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="chknormaaliiral" id="chknormaaliiral">
+                              </label>
+                            </div>
+                        </td>
+                        <td>
+                            <input class="form-control" id="txtnormaaliir" name="txtnormaaliir">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Voimakas ienvallin resortio</label></td>
+                        <td>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="chkvoimakasiryl" id="chkvoimakasiryl">
+                              </label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="chkvoimakasiral" id="chkvoimakasiral">
+                              </label>
+                            </div>
+                        </td>
+                        <td>
+                            <input class="form-control" id="txtvoimakasir" name="txtvoimakasir">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Kiinteä limakalvo</label></td>
+                        <td>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="chkkiintealimakalvoyl" id="chkkiintealimakalvoyl">
+                              </label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="chkkiintealimakalvoal" id="chkkiintealimakalvoal">
+                              </label>
+                            </div>
+                        </td>
+                        <td>
+                            <input class="form-control" id="txtkiintealimakalvo" name="txtkiintealimakalvo">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Paikallinen muutos</label></td>
+                        <td>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="chkpaikallinenmuutosyl" id="chkpaikallinenmuutosyl">
+                              </label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="chkpaikallinenmuutosal" id="chkpaikallinenmuutosal">
+                              </label>
+                            </div>
+                        </td>
+                        <td>
+                            <input class="form-control" id="txtpaikallinenmuutos" name="txtpaikallinenmuutos">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Laaja muutos</label></td>
+                        <td>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="chklaajamuutosyl" id="chklaajamuutosyl">
+                              </label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="chklaajamuutosal" id="chklaajamuutosal">
+                              </label>
+                            </div>
+                        </td>
+                        <td>
+                            <input class="form-control" id="txtlaajamuutos" name="txtlaajamuutos">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Terve limakalvo</label></td>
+                        <td>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="chktervelimakalvoyl" id="chktervelimakalvoyl">
+                              </label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="chktervelimakalvoal" id="chktervelimakalvoal">
+                              </label>
+                            </div>
+                        </td>
+                        <td>
+                            <input class="form-control" id="txttervelimakalvo" name="txttervelimakalvo">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Paikallinen stomatiitti</label></td>
+                        <td>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="chkpaikallinenstomatiittiyl" id="chkpaikallinenstomatiittiyl">
+                              </label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="chkpaikallinenstomatiittial" id="chkpaikallinenstomatiittial">
+                              </label>
+                            </div>
+                        </td>
+                        <td>
+                            <input class="form-control" id="txtpaikallinenstomatiitti" name="txtpaikallinenstomatiitti">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Yleinen stomatiitti</label></td>
+                        <td>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="chkyleinenstomatiittiyl" id="chkyleinenstomatiittiyl">
+                              </label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="chkyleinenstomatiittial" id="chkyleinenstomatiittial">
+                              </label>
+                            </div>
+                        </td>
+                        <td>
+                            <input class="form-control" id="txtyleinenstomatiitti" name="txtyleinenstomatiitti">
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+
         </div>
 
         

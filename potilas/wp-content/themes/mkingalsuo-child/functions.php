@@ -20,6 +20,10 @@ function theme_enqueue_styles() {
         get_stylesheet_directory_uri() . '/font-awesome/css/font-awesome.min.css'
     );
 
+    wp_enqueue_style( 'daterangepicker-css', 
+        get_stylesheet_directory_uri() . '/css/daterangepicker.css'
+    );
+
     //wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 
     wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css' );
@@ -39,6 +43,9 @@ function theme_enqueue_scripts() {
     wp_register_script('bootstrap-script', get_stylesheet_directory_uri(). '/js/bootstrap.min.js', array('jquery'), '1.1');
     wp_enqueue_script('bootstrap-script');
 
+    wp_register_script('moment-script', get_stylesheet_directory_uri(). '/js/moment.min.js', array('jquery'), '1.1');
+    wp_enqueue_script('moment-script');
+
     wp_register_script('bootstrap-toggle-script', get_stylesheet_directory_uri(). '/js/bootstrap-toggle.min.js', array('jquery'), '1.1');
     wp_enqueue_script('bootstrap-toggle-script');
 
@@ -56,6 +63,12 @@ function theme_enqueue_scripts() {
         //get selected tabs
         $selected_tab = $_GET['t'];
         
+        if($selected_tab == 5) {
+            wp_register_script('daterangepicker-script', get_stylesheet_directory_uri(). '/js/daterangepicker.js', array('jquery'), '1.1');
+            wp_enqueue_script('daterangepicker-script');
+        }
+
+        // add custom js for each tab
         wp_register_script('patient-ajax', get_stylesheet_directory_uri(). '/js/view.patient-t'. $selected_tab .'.js', array('jquery'), '1.1');
 
     }
