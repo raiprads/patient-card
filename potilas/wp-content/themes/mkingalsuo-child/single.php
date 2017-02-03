@@ -42,10 +42,12 @@ include_once('functions/encryption.php');
                     	<?php
 
                     		$ptabs = $_GET['t'];
+                            $action = $_GET['action'];
                     		
                     		if($ptabs == "") { $ptabs = 1; }
+                            if($action != "") { $action = '-' . $action; }
 
-                    		get_template_part('profile-tab-' . $ptabs);
+                    		get_template_part('profile-tab-' . $ptabs . $action );
 
                     	?>
 

@@ -91,6 +91,11 @@ $hash = get_the_content();
 	</div>
 	<!-- end osoite -->
 
+</div>
+
+<div class="col-lg-6">
+
+	
 	<!-- start työpaikka -->
 	<div class="panel panel-default">
 	  	<div class="panel-heading">Työpaikka</div>
@@ -132,6 +137,51 @@ $hash = get_the_content();
 	</div>
 	<!-- end työpaikka -->
 
+	<!-- account information -->
+	<div class="panel panel-info">
+	  	<div class="panel-heading">Record Info</div>
+	 	<div class="panel-body">
+	 		
+	 		<table class="table">
+				<tbody>
+					<tr> 
+		                <th>Date Posted</th>
+		                <td>
+		                	<?php the_time('l, F jS, Y g:i a') ?>
+		                </td>
+		            </tr>
+		            <tr> 
+		                <th>Date Updated</th>
+		                <td>
+		                	<?php the_modified_date('l, F jS, Y g:i a'); ?>
+		                </td>
+		            </tr>
+		            <tr> 
+		                <th>Added by</th>
+		                <td>
+		                	<?php the_author(); ?>
+		                </td>
+		            </tr>
+		            <tr> 
+		                <th>Modified by</th>
+		                <td>
+		                	<?php the_modified_author(); ?>
+		                </td>
+		            </tr>
+				</tbody>
+			</table>
 
+	 	</div>
+	</div>
+	<!-- end account information -->
+
+
+</div>
+
+<div class="col-lg-12">
+
+    <hr/>
+
+    <a href="?t=1&action=edit" class="btn btn-primary"><i class="fa fa-edit"></i> Edit</a>
 
 </div>

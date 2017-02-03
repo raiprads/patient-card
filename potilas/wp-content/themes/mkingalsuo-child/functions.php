@@ -85,6 +85,10 @@ include_once("functions/add-patient.php");
 add_action( 'wp_ajax_add_new_patient', 'add_new_patient' );
 //add_action( 'wp_ajax_nopriv_add_new_patient', 'add_new_patient' );
 
+include_once("functions/update_patient.php");
+// TAB 1
+add_action( 'wp_ajax_update_patient_tab1', 'update_patient_tab1' );
+
 include_once("functions/patient-teeth.php");
 add_action( 'wp_ajax_view_patient_teeth', 'view_patient_teeth' );
 add_action( 'wp_ajax_save_patient_teeth_values', 'save_patient_teeth_values' );

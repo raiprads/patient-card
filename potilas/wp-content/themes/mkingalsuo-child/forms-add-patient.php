@@ -70,6 +70,10 @@ get_header();
                                 <input class="form-control" id="txtsposti" name="txtsposti">
                             </div>
 
+                        </div>
+
+                        <div class="col-lg-6">
+
                             <h3>Osoite</h3>
 
                             <div class="form-group col-md-12 col-lg-12">
@@ -112,20 +116,20 @@ get_header();
 
                             <h3>Työpaikka</h3>
 
-                            <div class="form-group col-md-12 col-lg-12">
+                            <div class="form-group col-md-6 col-lg-6">
                                 <label>Ammatti</label>
                                 <input class="form-control" id="txtammatti" name="txtammatti">
                             </div>
 
+                            <div class="form-group col-md-6 col-lg-6">
+                                <label>Puh. työhön</label>
+                                <input class="form-control" id="txtpuhtyohon" name="txtpuhtyohon">
+                            </div> 
+
                             <div class="form-group col-md-12 col-lg-12">
                                 <label>Osoite</label>
                                 <input class="form-control" id="txttyoosoite" name="txttyoosoite">
-                            </div>
-
-                            <div class="form-group col-md-12 col-lg-12">
-                                <label>Puh. työhön</label>
-                                <input class="form-control" id="txtpuhtyohon" name="txtpuhtyohon">
-                            </div>                       
+                            </div>                      
 
                         </div>
 
@@ -134,8 +138,8 @@ get_header();
 
                             <hr/>
 
-                            <button type="submit" class="btn btn-lg btn-primary" id="btn-add-new" >Save</button>
-                            <button type="reset" class="btn btn-lg btn-default"  >Reset</button>
+                            <button type="submit" class="btn btn-primary" id="btn-add-new" ><i class="fa fa-save"></i> Save</button>
+                            <button type="reset" class="btn btn-default"  >Reset</button>
 
                         </div>
 
