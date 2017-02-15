@@ -17,14 +17,7 @@ include_once('functions/encryption.php');
                         <h1 class="page-header">
                             <i class="fa fa-user"></i> <?php the_title(); ?>
                         </h1>
-                        <ol class="breadcrumb">
-                            <li>
-                                <i class="fa fa-dashboard"></i>  <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Dashboard</a>
-                            </li>
-                            <li class="active">
-                                <i class="fa fa-user"></i> <?php the_title(); ?>
-                            </li>
-                        </ol>
+
                     </div>
                 </div>
                 <!-- /.row -->

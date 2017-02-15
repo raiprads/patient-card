@@ -24,14 +24,7 @@ get_header();
                         <h1 class="page-header">
                             <i class="fa fa-edit"></i> Add New Patient
                         </h1>
-                        <ol class="breadcrumb">
-                            <li>
-                                <i class="fa fa-dashboard"></i>  <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Dashboard</a>
-                            </li>
-                            <li class="active">
-                                <i class="fa fa-edit"></i> Add New Patient
-                            </li>
-                        </ol>
+                        
                     </div>
                 </div>
                 <!-- /.row -->

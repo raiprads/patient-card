@@ -2,6 +2,67 @@
 
 include_once('encryption.php');
 
+function update_patient_tab2() {
+
+    if ( !wp_verify_nonce( $_REQUEST['nonce'], "update_patient_tab2_nonce")) {
+        exit("No naughty business please!");
+    }
+
+    $data = $_REQUEST;  
+
+    $post_id = $data['post_id'];
+
+	//set tab 2 update info
+	add_update_mymeta($post_id, 'tab_2', 1, false );
+
+	add_update_mymeta($post_id, 'patient_chkyliherkkyys', $data['chkyliherkkyys']);
+	add_update_mymeta($post_id, 'patient_chkreuma', $data['chkreuma']);
+	add_update_mymeta($post_id, 'patient_chksjverisuonisairaus', $data['chksjverisuonisairaus']);
+	add_update_mymeta($post_id, 'patient_chkvjverenvuototaudit', $data['chkvjverenvuototaudit']);
+	add_update_mymeta($post_id, 'patient_chkpsadehoito', $data['chkpsadehoito']);
+	
+	add_update_mymeta($post_id, 'patient_chkepilepsia', $data['chkepilepsia']);
+	add_update_mymeta($post_id, 'patient_chkttauti', $data['chkttauti']);
+	add_update_mymeta($post_id, 'patient_txtttauti', $data['txtttauti']);
+	add_update_mymeta($post_id, 'patient_chkmsairaudet', $data['chkmsairaudet']);
+	add_update_mymeta($post_id, 'patient_txtmsairaudet', $data['txtmsairaudet']);
+	
+	add_update_mymeta($post_id, 'patient_chklaakitys', $data['chklaakitys']);
+	add_update_mymeta($post_id, 'patient_txtlaakitys', $data['txtlaakitys']);
+	add_update_mymeta($post_id, 'patient_chksyljeneritys', $data['chksyljeneritys']);
+	add_update_mymeta($post_id, 'patient_txtaahhoito', $data['txtaahhoito']);
+	add_update_mymeta($post_id, 'patient_txtvuosi', $data['txtvuosi']);
+	
+	add_update_mymeta($post_id, 'patient_chkaproteesit', $data['chkaproteesit']);
+	add_update_mymeta($post_id, 'patient_chkmillaisetyl', $data['chkmillaisetyl']);
+	add_update_mymeta($post_id, 'patient_chkmillaisetal', $data['chkmillaisetal']);
+	add_update_mymeta($post_id, 'patient_txtvalmistettuv', $data['txtvalmistettuv']);
+	add_update_mymeta($post_id, 'patient_txtpohjattuv', $data['txtpohjattuv']);
+	
+	add_update_mymeta($post_id, 'patient_txtkorjattuv', $data['txtkorjattuv']);
+	add_update_mymeta($post_id, 'patient_chkpmptulkonakoon', $data['chkpmptulkonakoon']);
+	add_update_mymeta($post_id, 'patient_chkpmptpureskelukykyyn', $data['chkpmptpureskelukykyyn']);
+	add_update_mymeta($post_id, 'patient_txtaheproteeseista', $data['txtaheproteeseista']);
+	add_update_mymeta($post_id, 'patient_chkpurentaant', $data['chkpurentaant']);
+	
+	add_update_mymeta($post_id, 'patient_chkpurentapost', $data['chkpurentapost']);
+	add_update_mymeta($post_id, 'patient_txtvapaavalimm', $data['txtvapaavalimm']);
+	add_update_mymeta($post_id, 'patient_chkpurentaristipur', $data['chkpurentaristipur']);
+	add_update_mymeta($post_id, 'patient_txtpurentakorkeusmm', $data['txtpurentakorkeusmm']);
+
+    if(!empty($post_id)) {
+
+    	$result['type'] = "success";
+    	$result['message'] = "<strong>Muutokset on tallennettu.</strong>";
+    }
+    
+    echo json_encode($result);
+
+   	die();
+
+}
+
+// tab 1 start
 function update_patient_tab1() {
 
     if ( !wp_verify_nonce( $_REQUEST['nonce'], "update_patient_tab1_nonce")) {
@@ -38,7 +99,7 @@ function update_patient_tab1() {
     if(!empty($post_id)) {
 
     	$result['type'] = "success";
-    	$result['message'] = "<strong>Record updated!</strong>";
+    	$result['message'] = "<strong>Muutokset on tallennettu.</strong>";
     }
     
     echo json_encode($result);
@@ -46,6 +107,8 @@ function update_patient_tab1() {
    	die();
 
 }
+
+// end tab 1
 
 function add_update_mymeta($post_id, $field_name, $data, $encrypt = true) {
 	

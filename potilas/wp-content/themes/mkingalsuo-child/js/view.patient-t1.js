@@ -16,20 +16,24 @@ jQuery(document).ready( function() {
 			txtpostinumero: {
 				required: true,
 				minlength: 5,
-				maxlength: 5
+				maxlength: 5,
+				number: true
 			}
 		},
 		messages: {
-			txthktunnus: "Please enter your henkilötunnus",
-			txtsukunimi: "Please enter your sukunimi",
-			txtetunimi: "Please enter your etunimi",
+			txthktunnus: "Henkilötunnus on pakollinen.",
+			txtsukunimi: "Sukunimi on pakollinen.",
+			txtetunimi: "Etunimi on pakollinen.",
 			txtpuhkotiin: {
-				required: "Please enter your puh. kotiin",
-		      	digits: "Your puh. kotiin must consist of digits"
+				required: "Puh. kotiin on pakollinen.",
+		      	digits: "Puh. kotiin täytyy sisältää numeroita."
 			},
-			txtsposti: "Please enter a valid sähköposti",
-			txtkotiosoite: "Please enter your kotiosoite",
-			txtpostinumero: "Please enter your postinumero"
+			txtsposti: "Sähköposti on virheellinen.",
+			txtkotiosoite: "Kotiosoite on pakollinen.",
+			txtpostinumero: {
+				required: "Postinumero on pakollinen.",
+				number: "Postinumero täytyy sisältää numeroita."
+			}
 		},
 		submitHandler: function(form) {
 		    

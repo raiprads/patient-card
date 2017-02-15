@@ -157,7 +157,7 @@ $hash = get_the_content();
 		                </td>
 		            </tr>
 		            <tr> 
-		                <th>Added by</th>
+		                <th>Posted by</th>
 		                <td>
 		                	<?php the_author(); ?>
 		                </td>
@@ -165,7 +165,13 @@ $hash = get_the_content();
 		            <tr> 
 		                <th>Modified by</th>
 		                <td>
-		                	<?php the_modified_author(); ?>
+		                	<?php 
+		                		if (get_the_modified_author()) {
+		                			the_modified_author();
+		                		} else {
+		                			the_author();
+		                		}
+		                	?>
 		                </td>
 		            </tr>
 				</tbody>

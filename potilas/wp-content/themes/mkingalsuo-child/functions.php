@@ -89,6 +89,9 @@ include_once("functions/update_patient.php");
 // TAB 1
 add_action( 'wp_ajax_update_patient_tab1', 'update_patient_tab1' );
 
+// TAB 2
+add_action( 'wp_ajax_update_patient_tab2', 'update_patient_tab2' );
+
 include_once("functions/patient-teeth.php");
 add_action( 'wp_ajax_view_patient_teeth', 'view_patient_teeth' );
 add_action( 'wp_ajax_save_patient_teeth_values', 'save_patient_teeth_values' );
@@ -154,4 +157,27 @@ add_filter('comment_post_redirect', 'redirect_after_comment');
 function redirect_after_comment($location)
 {
     return $_SERVER["HTTP_REFERER"];
+}
+
+// retreiving data from get_post_meta
+function mypost_meta_data($post_id, $key, $replacement, $encrypted = false, $hash = null) 
+{
+
+    if($encrypted){
+        $string = get_post_meta( $post_id, $key, true );
+        $string =  decrypt_data($string, $hash);
+    } else {
+        $string = get_post_meta( $post_id, $key, true );
+    }
+
+    return format_words_output($string,$replacement);
+
+}
+
+function format_words_output($string,$replacement) {
+
+    if($string == "on") {
+        return $replacement;
+    }
+
 }

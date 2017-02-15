@@ -1,221 +1,70 @@
-<form id="form-add-new" method="post" class="form-horizontal">
-<input type="hidden" id="mynonce" name="mynonce" value="<?php echo wp_create_nonce("add_new_patient_nonce"); ?>">
-
-    <!-- start Esitiedot -->
-    <div class="col-lg-6">
-
-        <h3>Esitiedot</h3>
-
-        <div class="form-group">
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkyliherkkyys" name="chkyliherkkyys" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
-            </div>
-            <label class="col-md-10 col-lg-10">Yliherkkyys</label>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkreuma" name="chkreuma" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
-            </div>
-            <label class="col-md-10 col-lg-10">Reuma</label>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chksjverisuonisairaus" name="chksjverisuonisairaus" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
-            </div>
-            <label class="col-md-10 col-lg-10">Sydän- ja verisuonisairaus</label>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkvjverenvuototaudit" name="chkvjverenvuototaudit" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
-            </div>
-            <label class="col-md-10 col-lg-10">Veri- ja verenvuototaudit</label>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkpsadehoito" name="chkpsadehoito" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
-            </div>
-            <label class="col-md-10 col-lg-10">Päänalueen sädehoito</label>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkepilepsia" name="chkepilepsia" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
-            </div>
-            <label class="col-md-10 col-lg-10">Epilepsia</label>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkttauti" name="chkttauti" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
-            </div>
-            <label class="col-md-10 col-lg-10">Tarttuva tauti</label>
-            <div class="col-md-2 col-lg-2"></div>
-            <div class="col-md-8 col-lg-8">
-                <input class="form-control" id="txtttauti" name="txtttauti">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkmsairaudet" name="chkmsairaudet" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
-            </div>
-            <label class="col-md-10 col-lg-10">Muut sairaudet</label>
-            <div class="col-md-2 col-lg-2"></div>
-            <div class="col-md-8 col-lg-8">
-                <input class="form-control" id="txtmsairaudet" name="txtmsairaudet">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkmsairaudet" name="chklaakitys" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
-            </div>
-            <label class="col-md-10 col-lg-10">Lääkitys</label>
-            <div class="col-md-2 col-lg-2"></div>
-            <div class="col-md-8 col-lg-8">
-                <input class="form-control" id="txtlaakitys" name="txtlaakitys">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chksyljeneritys" name="chksyljeneritys" data-size="mini" data-toggle="toggle" data-on="Alentunut" data-off="Normaali">
-            </div>
-            <label class="col-md-10 col-lg-10">Syljeneritys</label>
-        </div>
-                    
-
-    </div>
-    <!-- end Esitiedot -->
-
-    <!-- start Aikaisempi Hampaiden Hoito -->
-    <div class="col-lg-6">
-
-        <h3>Aikaisempi Hampaiden Hoito</h3>
-
-        <div class="form-group col-md-12 col-lg-12">
-            <textarea class="form-control" id="txtaahhoito" name="txtaahhoito" rows="3" class="col-md-12 col-lg-12"></textarea>
-        </div>
-
-        <div class="form-group col-md-12 col-lg-12">
-            <label>Vuosi</label>
-            <input class="form-control" id="txtvuosi" name="txtvuosi">
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkaproteesit" name="chkaproteesit" data-size="mini" data-toggle="toggle" data-on="On" data-off="Ei">
-            </div>
-            <label class="col-md-10 col-lg-10">Aikaisemmat proteesit</label>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-12 col-lg-12">
-                <h4>Millaiset</h4>
-            </div>
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkmillaisetyl" name="chkmillaisetyl" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
-            </div>
-            <label class="col-md-10 col-lg-10">YL</label>
-
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkmillaisetal" name="chkmillaisetal" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
-            </div>
-            <label class="col-md-10 col-lg-10">AL</label>
-        </div>
-
-        <div class="form-group col-md-4 col-lg-4">
-            <div class="col-md-12 col-lg-12">
-                <label>Valmistettu v.</label>
-                <input class="form-control" id="txtvalmistettuv" name="txtvalmistettuv">
-            </div>
-        </div>
-
-        <div class="form-group col-md-4 col-lg-4">
-            <div class="col-md-12 col-lg-12">
-                <label>Pohjattu v.</label>
-                <input class="form-control" id="txtpohjattuv" name="txtpohjattuv">
-            </div>
-        </div>
-
-        <div class="form-group col-md-4 col-lg-4">
-            <div class="col-md-12 col-lg-12">
-                <label>Korjattu v.</label>
-                <input class="form-control" id="txtkorjattuv" name="txtkorjattuv">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-12 col-lg-12">
-                <h4>Potilaan mielipide proteeseitaan</h4>
-            </div>
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkpmptulkonakoon" name="chkpmptulkonakoon" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
-            </div>
-            <label class="col-md-10 col-lg-10">Tyytyväinen ulkonäköön</label>
-
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkpmptpureskelukykyyn" name="chkpmptpureskelukykyyn" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
-            </div>
-            <label class="col-md-10 col-lg-10">Tyytyväinen pureskelukykyyn</label>
-        </div>
-
-        <div class="form-group col-md-12 col-lg-12">
-            <label>Havainnot entisistä proteeseistä</label>
-            <textarea class="form-control" id="txtaheproteeseista" name="txtaheproteeseista" rows="3" class="col-md-12 col-lg-12"></textarea>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-12 col-lg-12">
-                <h4>Purenta</h4>
-            </div>
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkpurentaant" name="chkpurentaant" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
-            </div>
-            <label class="col-md-10 col-lg-10">Ant.</label>
-
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkpurentapost" name="chkpurentapost" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
-            </div>
-            <label class="col-md-10 col-lg-10">Post.</label>
-
-            <div class="col-md-2 col-lg-2">
-                <input type="checkbox" id="chkpurentaristipur" name="chkpurentaristipur" data-size="mini" data-toggle="toggle" data-on="Kyllä" data-off="Ei">
-            </div>
-            <label class="col-md-10 col-lg-10">Ristipur.</label>
-        </div>
-
-        <div class="form-group col-md-6 col-lg-6">
-            <div class="col-md-12 col-lg-12">
-                <label>Vapaaväli mm.</label>
-                <input class="form-control" id="txtvapaavalimm" name="txtvapaavalimm">
-            </div>
-        </div>
-
-        <div class="form-group col-md-6 col-lg-6">
-            <div class="col-md-12 col-lg-12">
-                <label>Purentakorkeus mm.</label>
-                <input class="form-control" id="txtpurentakorkeusmm" name="txtpurentakorkeusmm">
-            </div>
-        </div>
-
-        
-
-    </div>
-    <!-- end Aikaisempi Hampaiden Hoito -->
-
+<?php
+    $tab2 = get_post_meta( get_the_ID(), 'tab_2', true ); 
     
-    <div class="col-lg-12">
+    if(empty($tab2)) {
+?>
+<div class="col-lg-12">
+<a href="?t=2&action=edit" class="btn btn-success"><i class="fa fa-plus-circle"></i> Add data</a>
+</div>
+<?php 
 
-        <hr/>
+} else { 
 
-        <button type="submit" class="btn btn-lg btn-primary" id="btn-add-new" >Save</button>
-        <button type="reset" class="btn btn-lg btn-default"  >Reset</button>
+	$hash = get_the_content();
 
+?>
+<div class="col-lg-6">
+    
+    <!-- start henkilötiedot -->
+    <div class="panel panel-default">
+        <div class="panel-heading">Esitiedot</div>
+        <div class="panel-body">
+
+        	<table class="table">
+				<tbody>
+					<tr> 
+		                <th>Yliherkkyys</th>
+		                <td>
+		                	<?php
+			                    //mypost_meta_data($post_id, $key, $replacement, $encrypted = false, $hash = null) 
+			                    echo mypost_meta_data(get_the_ID(), 'patient_chkyliherkkyys', "Kyllä", true, $hash); 
+		                	?>
+		                </td>
+		            </tr>
+		            <tr> 
+		                <th>Reuma</th>
+		                <td><?php echo mypost_meta_data(get_the_ID(), 'patient_chksjverisuonisairaus', "Kyllä", true, $hash);  ?></td>
+		            </tr>
+		            <tr> 
+		                <th>Sydän- ja verisuonisairaus</th>
+		                <td><?php echo get_post_meta( get_the_ID(), 'patient_etunimi', true ); ?></td>
+		            </tr>
+		            <tr> 
+		                <th>Veri- ja verenvuototaudit</th>
+		                <td>
+		                	<?php
+		                		$pnumero = get_post_meta( get_the_ID(), 'patient_puhkotiin', true ); 
+			                    echo decrypt_data($pnumero, $hash);
+		                	?>
+		                </td>
+		            </tr>
+		            <tr> 
+		                <th>Päänalueen sädehoito</th>
+		                <td>
+		                	<?php
+		                		$sposti = get_post_meta( get_the_ID(), 'patient_sposti', true ); 
+			                    echo decrypt_data($sposti, $hash);
+		                	?>
+		                </td>
+		            </tr>
+				</tbody>
+			</table>
+
+        </div>
     </div>
+    <!-- end henkilötiedot -->
 
-</form>
+</div>
+<?php }
+
+?>

@@ -139,6 +139,7 @@ $hash = get_the_content();
         <hr/>
 
         <button type="submit" class="btn btn-primary" id="btn-add-new" ><i class="fa fa-save"></i> Update</button>
+        <button type="button" class="btn btn-default" onclick="window.location = '<?php echo get_the_permalink()."?t=1"; ?>'" ><i class="fa fa-arrow-left"></i> Back</button>
 
     </div>
 
