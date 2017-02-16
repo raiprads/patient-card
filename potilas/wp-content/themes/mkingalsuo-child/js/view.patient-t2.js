@@ -4,6 +4,39 @@ function getCheckboxValue(chkid) {
 
 jQuery(document).ready( function() {
 
+
+	jQuery("#chkttauti").change( function(){
+		
+		if( !jQuery(this).is(":checked") ) {
+            jQuery("#txtttauti").val("");
+        }else {
+        	jQuery("#txtttauti").focus();
+        }
+
+	});
+
+	jQuery("#chkmsairaudet").change( function(){
+		
+		if( !jQuery(this).is(":checked") ) {
+            jQuery("#txtmsairaudet").val("");
+        }else {
+        	jQuery("#txtmsairaudet").focus();
+        }
+
+	});
+
+	jQuery("#chklaakitys").change( function(){
+		
+		if( !jQuery(this).is(":checked") ) {
+            jQuery("#txtlaakitys").val("");
+        }else {
+        	jQuery("#txtlaakitys").focus();
+        }
+
+	});
+	
+
+
 	jQuery("#form-update-tab2").validate({
 		rules: {
 			txtttauti: {
