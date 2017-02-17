@@ -178,6 +178,8 @@ function format_words_output($string,$replacement) {
 
     if($string == "on") {
         return $replacement;
+    } else {
+        return $string;
     }
 
 }

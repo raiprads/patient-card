@@ -11,9 +11,9 @@ $hash = get_the_content();
 	  	<div class="panel-heading">Henkilötiedot</div>
 	 	<div class="panel-body">
 	 		
-	 		<table class="table">
+	 		<table class="table table-hover">
 				<tbody>
-					<tr> 
+					<tr class="tr-top"> 
 		                <th>Henkilötunnus</th>
 		                <td>
 		                	<?php
@@ -60,9 +60,9 @@ $hash = get_the_content();
 	  	<div class="panel-heading">Osoite</div>
 	 	<div class="panel-body">
 	 		
-	 		<table class="table">
+	 		<table class="table table-hover">
 				<tbody>
-					<tr> 
+					<tr class="tr-top"> 
 		                <th>Kotiosoite</th>
 		                <td>
 		                	<?php
@@ -101,9 +101,9 @@ $hash = get_the_content();
 	  	<div class="panel-heading">Työpaikka</div>
 	 	<div class="panel-body">
 	 		
-	 		<table class="table">
+	 		<table class="table table-hover">
 				<tbody>
-					<tr> 
+					<tr class="tr-top"> 
 		                <th>Ammatti</th>
 		                <td>
 		                	<?php
@@ -142,9 +142,9 @@ $hash = get_the_content();
 	  	<div class="panel-heading">Record Info</div>
 	 	<div class="panel-body">
 	 		
-	 		<table class="table">
+	 		<table class="table table-hover">
 				<tbody>
-					<tr> 
+					<tr class="tr-top"> 
 		                <th>Date Posted</th>
 		                <td>
 		                	<?php the_time('l, F jS, Y g:i a') ?>

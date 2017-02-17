@@ -20,9 +20,9 @@
         <div class="panel-heading">Esitiedot</div>
         <div class="panel-body">
 
-        	<table class="table">
+        	<table class="table table-hover">
 				<tbody>
-					<tr> 
+					<tr class="tr-top"> 
 		                <th>Yliherkkyys</th>
 		                <td>
 		                	<?php
@@ -98,9 +98,9 @@
         <div class="panel-heading">Aikaisempi Hampaiden Hoito</div>
         <div class="panel-body">
 
-        	<table class="table">
+        	<table class="table table-hover">
 				<tbody>
-					<tr> 
+					<tr class="tr-top"> 
 		                <td colspan="2">
 		                	<?php
 			                    echo mypost_meta_data(get_the_ID(), 'patient_txtaahhoito', "", true, $hash); 
@@ -115,7 +115,7 @@
 		                <th>Aikaisemmat proteesit</th>
 		                <td><?php echo mypost_meta_data(get_the_ID(), 'patient_chkaproteesit', "On", true, $hash);  ?></td>
 		            </tr>
-		            <tr>
+		            <tr class="tr-top">
 		            	<th colspan="2">
 		            		<h4>Millaiset</h4>
 		            	</th>
@@ -132,10 +132,10 @@
 		                	<?php echo mypost_meta_data(get_the_ID(), 'patient_chkmillaisetal', "Kyllä", true, $hash); ?>
 		                </td>
 		            </tr>
-		            <tr> 
+		            <tr class="tr-top"> 
 		                <th colspan="2"></th>
 		            </tr>
-		            <tr> 
+		            <tr class="tr-top"> 
 		                <th>Valmistettu v.</th>
 		                <td>
 		                	<?php echo mypost_meta_data(get_the_ID(), 'patient_txtvalmistettuv', "", true, $hash); ?>
@@ -153,7 +153,7 @@
 		                	<?php echo mypost_meta_data(get_the_ID(), 'patient_txtkorjattuv', "", true, $hash); ?>
 		                </td>
 		            </tr>
-		            <tr>
+		            <tr class="tr-top">
 		            	<th colspan="2">
 		            		<h4>Potilaan mielipide proteeseitaan</h4>
 		            	</th>
@@ -170,10 +170,10 @@
 		                	<?php echo mypost_meta_data(get_the_ID(), 'patient_chkpmptpureskelukykyyn', "Kyllä", true, $hash); ?>
 		                </td>
 		            </tr>
-		            <tr> 
+		            <tr class="tr-top"> 
 		                <th colspan="2"></th>
 		            </tr>
-		            <tr> 
+		            <tr class="tr-top"> 
 		                <th colspan="2">Havainnot entisistä proteeseistä</th>
 		            </tr>
 		            <tr>
@@ -181,7 +181,7 @@
 		                	<?php echo mypost_meta_data(get_the_ID(), 'patient_txtaheproteeseista', "", true, $hash); ?>
 		                </td>
 		            </tr>
-		            <tr>
+		            <tr class="tr-top">
 		            	<th colspan="2">
 		            		<h4>Purenta</h4>
 		            	</th>
@@ -204,10 +204,10 @@
 		                	<?php echo mypost_meta_data(get_the_ID(), 'patient_chkpurentaristipur', "Kyllä", true, $hash); ?>
 		                </td>
 		            </tr>
-		            <tr> 
+		            <tr class="tr-top"> 
 		                <th colspan="2"></th>
 		            </tr>
-		            <tr> 
+		            <tr class="tr-top"> 
 		                <th>Vapaaväli mm.</th>
 		                <td>
 		                	<?php echo mypost_meta_data(get_the_ID(), 'patient_txtvapaavalimm', "", true, $hash); ?>

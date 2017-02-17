@@ -36,3 +36,8 @@ label.required:after {
 .top20 { margin-top: 20px; }
 .top25 { margin-top: 25px; }
 .top30 { margin-top: 30px; }
+
+.table>tbody>.tr-top>th,
+.table>tbody>.tr-top>td {
+	border-top: 0px;
+}

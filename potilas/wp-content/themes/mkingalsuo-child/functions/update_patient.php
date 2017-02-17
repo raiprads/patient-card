@@ -13,10 +13,15 @@ function update_patient_tab2() {
     $post_id = $data['post_id'];
 
     // Gather post data.
-	$post = array('ID' => $post_id );
-	 
-	// Insert the post into the database.
-	wp_update_post( $post );
+	$current_time = current_time('mysql');
+
+	wp_update_post(
+		array (
+			'ID'            => $post_id,
+			'post_date'     => $current_time,
+			'post_date_gmt' => get_gmt_from_date($current_time)
+		)
+	);
 
 	//set tab 2 update info
 	add_update_mymeta($post_id, 'tab_2', 1, false );
@@ -118,37 +123,22 @@ function update_patient_tab1() {
 
 function add_update_mymeta($post_id, $field_name, $data, $encrypt = true) {
 
-	if(!empty($data)) {
+	$hash = get_post_field('post_content', $post_id);
+	$old_data = get_post_meta( $post_id, $field_name, true);
 
-		$hash = get_post_field('post_content', $post_id);
-		//$hash = apply_filters('the_content', get_post_field('post_content', $post_id));
+	//process encryption
+	if($encrypt) {
+		$data = encrypt_data($data, $hash);
+	}
 
-		//process encryption
-		if($encrypt) {
-			$data = encrypt_data($data, $hash);
-		}
+	if($old_data != $data) {		
 
 		if ( ! add_post_meta( $post_id, $field_name, $data, true ) ) { 
+
 			update_post_meta( $post_id, $field_name, $data );
+			
 		}
 
-	} else {
-		//this is for null data submitted or to update any key to null value 
-		$old_data = get_post_meta( $post_id, $field_name, true);
-
-		if($old_data != $data) {
-			$hash = get_post_field('post_content', $post_id);
-			//$hash = apply_filters('the_content', get_post_field('post_content', $post_id));
-
-			//process encryption
-			if($encrypt) {
-				$data = encrypt_data($data, $hash);
-			}
-
-			if ( ! add_post_meta( $post_id, $field_name, $data, true ) ) { 
-				update_post_meta( $post_id, $field_name, $data );
-			}
-		}
 	}
 
 }
