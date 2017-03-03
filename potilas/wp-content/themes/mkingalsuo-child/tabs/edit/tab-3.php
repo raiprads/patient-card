@@ -1,5 +1,5 @@
 <form id="form-add-new" method="post" class="form-horizontal">
-<input type="hidden" id="mynonce" name="mynonce" value="<?php echo wp_create_nonce("add_new_patient_nonce"); ?>">
+<input type="hidden" id="mynonce" name="mynonce" value="<?php echo wp_create_nonce("update_patient_tab3_nonce"); ?>">
 
     <!-- start Ekstraoraalitutkimus -->
     <div class="col-lg-6">
@@ -173,16 +173,16 @@
                     <tr>
                         <td><label>Vähäinen ienvallin resortio</label></td>
                         <td>
-                            <div class="checkbox">
+                            <div class="radio">
                                 <label>
-                                    <input type="checkbox" name="chkvahaineniryl" id="chkvahaineniryl">
+                                    <input type="radio" name="chkvahainenir" value="yl">
                               </label>
                             </div>
                         </td>
                         <td>
-                            <div class="checkbox">
+                            <div class="radio">
                                 <label>
-                                    <input type="checkbox" name="chkvahaineniral" id="chkvahaineniral">
+                                    <input type="radio" name="chkvahainenir" value="al">
                               </label>
                             </div>
                         </td>
@@ -194,16 +194,16 @@
                     <tr>
                         <td><label>Normaali ienvallin resortio</label></td>
                         <td>
-                            <div class="checkbox">
+                            <div class="radio">
                                 <label>
-                                    <input type="checkbox" name="chknormaaliiryl" id="chknormaaliiryl">
+                                    <input type="radio" name="chknormaaliir" value="yl">
                               </label>
                             </div>
                         </td>
                         <td>
-                            <div class="checkbox">
+                            <div class="radio">
                                 <label>
-                                    <input type="checkbox" name="chknormaaliiral" id="chknormaaliiral">
+                                    <input type="radio" name="chknormaaliir" value="al">
                               </label>
                             </div>
                         </td>
@@ -215,16 +215,16 @@
                     <tr>
                         <td><label>Voimakas ienvallin resortio</label></td>
                         <td>
-                            <div class="checkbox">
+                            <div class="radio">
                                 <label>
-                                    <input type="checkbox" name="chkvoimakasiryl" id="chkvoimakasiryl">
+                                    <input type="radio" name="chkvoimakasir" value="yl">
                               </label>
                             </div>
                         </td>
                         <td>
-                            <div class="checkbox">
+                            <div class="radio">
                                 <label>
-                                    <input type="checkbox" name="chkvoimakasiral" id="chkvoimakasiral">
+                                    <input type="radio" name="chkvoimakasir" value="al">
                               </label>
                             </div>
                         </td>
@@ -236,16 +236,16 @@
                     <tr>
                         <td><label>Kiinteä limakalvo</label></td>
                         <td>
-                            <div class="checkbox">
+                            <div class="radio">
                                 <label>
-                                    <input type="checkbox" name="chkkiintealimakalvoyl" id="chkkiintealimakalvoyl">
+                                    <input type="radio" name="chkkiintealimakalvo" value="yl">
                               </label>
                             </div>
                         </td>
                         <td>
-                            <div class="checkbox">
+                            <div class="radio">
                                 <label>
-                                    <input type="checkbox" name="chkkiintealimakalvoal" id="chkkiintealimakalvoal">
+                                    <input type="radio" name="chkkiintealimakalvo" value="al">
                               </label>
                             </div>
                         </td>
@@ -257,16 +257,16 @@
                     <tr>
                         <td><label>Paikallinen muutos</label></td>
                         <td>
-                            <div class="checkbox">
+                            <div class="radio">
                                 <label>
-                                    <input type="checkbox" name="chkpaikallinenmuutosyl" id="chkpaikallinenmuutosyl">
+                                    <input type="radio" name="chkpaikallinenmuutos" value="yl">
                               </label>
                             </div>
                         </td>
                         <td>
-                            <div class="checkbox">
+                            <div class="radio">
                                 <label>
-                                    <input type="checkbox" name="chkpaikallinenmuutosal" id="chkpaikallinenmuutosal">
+                                    <input type="radio" name="chkpaikallinenmuutos" value="al">
                               </label>
                             </div>
                         </td>
@@ -278,16 +278,16 @@
                     <tr>
                         <td><label>Laaja muutos</label></td>
                         <td>
-                            <div class="checkbox">
+                            <div class="radio">
                                 <label>
-                                    <input type="checkbox" name="chklaajamuutosyl" id="chklaajamuutosyl">
+                                    <input type="radio" name="chklaajamuutos" value="yl">
                               </label>
                             </div>
                         </td>
                         <td>
-                            <div class="checkbox">
+                            <div class="radio">
                                 <label>
-                                    <input type="checkbox" name="chklaajamuutosal" id="chklaajamuutosal">
+                                    <input type="radio" name="chklaajamuutos" value="al">
                               </label>
                             </div>
                         </td>
@@ -299,16 +299,16 @@
                     <tr>
                         <td><label>Terve limakalvo</label></td>
                         <td>
-                            <div class="checkbox">
+                            <div class="radio">
                                 <label>
-                                    <input type="checkbox" name="chktervelimakalvoyl" id="chktervelimakalvoyl">
+                                    <input type="radio" name="chktervelimakalvo" value="yl">
                               </label>
                             </div>
                         </td>
                         <td>
-                            <div class="checkbox">
+                            <div class="radio">
                                 <label>
-                                    <input type="checkbox" name="chktervelimakalvoal" id="chktervelimakalvoal">
+                                    <input type="radio" name="chktervelimakalvo" value="al">
                               </label>
                             </div>
                         </td>
@@ -320,16 +320,16 @@
                     <tr>
                         <td><label>Paikallinen stomatiitti</label></td>
                         <td>
-                            <div class="checkbox">
+                            <div class="radio">
                                 <label>
-                                    <input type="checkbox" name="chkpaikallinenstomatiittiyl" id="chkpaikallinenstomatiittiyl">
+                                    <input type="radio" name="chkpaikallinenstomatiitti" value="yl">
                               </label>
                             </div>
                         </td>
                         <td>
-                            <div class="checkbox">
+                            <div class="radio">
                                 <label>
-                                    <input type="checkbox" name="chkpaikallinenstomatiittial" id="chkpaikallinenstomatiittial">
+                                    <input type="radio" name="chkpaikallinenstomatiitti" value="al">
                               </label>
                             </div>
                         </td>
@@ -341,16 +341,16 @@
                     <tr>
                         <td><label>Yleinen stomatiitti</label></td>
                         <td>
-                            <div class="checkbox">
+                            <div class="radio">
                                 <label>
-                                    <input type="checkbox" name="chkyleinenstomatiittiyl" id="chkyleinenstomatiittiyl">
+                                    <input type="radio" name="chkyleinenstomatiitti" value="yl">
                               </label>
                             </div>
                         </td>
                         <td>
-                            <div class="checkbox">
+                            <div class="radio">
                                 <label>
-                                    <input type="checkbox" name="chkyleinenstomatiittial" id="chkyleinenstomatiittial">
+                                    <input type="radio" name="chkyleinenstomatiitti" value="al">
                               </label>
                             </div>
                         </td>
@@ -375,8 +375,8 @@
 
         <hr/>
 
-        <button type="submit" class="btn btn-lg btn-primary" id="btn-add-new" >Save</button>
-        <button type="reset" class="btn btn-lg btn-default"  >Reset</button>
+        <button type="submit" class="btn btn-primary" id="btn-add-update" ><i class="fa fa-save"></i> Update</button>
+        <button type="button" class="btn btn-default" onclick="window.location = '<?php echo get_the_permalink()."?t=3"; ?>'" ><i class="fa fa-arrow-left"></i> Back</button>
 
     </div>
 

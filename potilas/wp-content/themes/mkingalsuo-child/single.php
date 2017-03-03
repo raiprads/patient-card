@@ -38,9 +38,9 @@ include_once('functions/encryption.php');
                             $action = $_GET['action'];
                     		
                     		if($ptabs == "") { $ptabs = 1; }
-                            if($action != "") { $action = '-' . $action; }
+                            if($action != "") { $action = 'edit/'; }
 
-                    		get_template_part('profile-tab-' . $ptabs . $action );
+                    		get_template_part('tabs/' . $action . 'tab-' . $ptabs );
 
                     	?>
 
