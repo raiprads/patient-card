@@ -92,6 +92,9 @@ add_action( 'wp_ajax_update_patient_tab1', 'update_patient_tab1' );
 // TAB 2
 add_action( 'wp_ajax_update_patient_tab2', 'update_patient_tab2' );
 
+// TAB 3
+add_action( 'wp_ajax_update_patient_tab3', 'update_patient_tab3' );
+
 include_once("functions/patient-teeth.php");
 add_action( 'wp_ajax_view_patient_teeth', 'view_patient_teeth' );
 add_action( 'wp_ajax_save_patient_teeth_values', 'save_patient_teeth_values' );

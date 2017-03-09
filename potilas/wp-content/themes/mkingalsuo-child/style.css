@@ -41,3 +41,11 @@ label.required:after {
 .table>tbody>.tr-top>td {
 	border-top: 0px;
 }
+
+.strong-green {
+	color: green;
+	font-size: 90%;
+	font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+	font-weight: bold;
+	margin-right: 10px;
+}

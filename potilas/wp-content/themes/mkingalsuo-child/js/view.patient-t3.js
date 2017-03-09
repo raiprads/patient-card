@@ -24,54 +24,30 @@ jQuery(document).ready( function() {
 	ifCheckFocusInput('poimut');
 	ifCheckFocusInput('arvet'); 
 
-	jQuery("#form-update-tab21111").validate({
+	jQuery("#form-update-tab3").validate({
 		rules: {
-			txtttauti: {
-				required: "#chkttauti:checked"
+			txtsuupielet: {
+				required: "#chksuupielet:checked"
 			},
-			txtmsairaudet: {
-				required: "#chkmsairaudet:checked"
+			txthuulet: {
+				required: "#chkhuulet:checked"
 			},
-			txtlaakitys: {
-				required: "#chklaakitys:checked"
+			txtimusolmukkeet: {
+				required: "#chkimusolmukkeet:checked"
 			},
-			txtvuosi: {
-				number: true,
-				minlength: 4
+			txtpoimut: {
+				required: "#chkpoimut:checked"
 			},
-			txtvalmistettuv: {
-				number: true,
-				minlength: 4
-			},
-			txtpohjattuv: {
-				number: true,
-				minlength: 4
-			},
-			txtkorjattuv: {
-				number: true,
-				minlength: 4
+			txtarvet: {
+				required: "#chkarvet:checked"
 			}
 		},
 		messages: {
-			txtttauti: "Tarttuva tauti on pakollinen.",
-			txtmsairaudet: "Muut sairaudet on pakollinen.",
-			txtlaakitys: "Lääkitys on pakollinen.",
-			txtvuosi: {
-				number: "Vuosi täytyy sisältää numeroita.",
-				minlength: "Anna vähintään 4 merkkiä."
-			},
-			txtvalmistettuv: {
-				number: "Valmistettu v. täytyy sisältää numeroita.",
-				minlength: "Anna vähintään 4 merkkiä."
-			},
-			txtpohjattuv: {
-				number: "Pohjattu v. täytyy sisältää numeroita.",
-				minlength: "Anna vähintään 4 merkkiä."
-			},
-			txtkorjattuv: {
-				number: "Korjattu v. täytyy sisältää numeroita.",
-				minlength: "Anna vähintään 4 merkkiä."
-			}
+			txtsuupielet: "Suupielet on pakollinen.",
+			txthuulet: "Huulet on pakollinen.",
+			txtimusolmukkeet: "Imusolmukkeet on pakollinen.",
+			txtpoimut: "Poimut on pakollinen.",
+			txtarvet: "Arvet on pakollinen."
 		},
 		submitHandler: function(form) {
 		    
@@ -79,7 +55,7 @@ jQuery(document).ready( function() {
 		    //vars
 		    var serializeData = jQuery(form).serialize();
 
-		    console.log(serializeData);
+		    //console.log(serializeData);
 
 		    jQuery.ajax({
 		        type : "post",

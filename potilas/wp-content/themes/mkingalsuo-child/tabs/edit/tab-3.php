@@ -1,5 +1,9 @@
-<form id="form-add-new" method="post" class="form-horizontal">
-<input type="hidden" id="mynonce" name="mynonce" value="<?php echo wp_create_nonce("update_patient_tab3_nonce"); ?>">
+<form id="form-update-tab3" method="post" class="form-horizontal">
+<input type="hidden" id="nonce" name="nonce" value="<?php echo wp_create_nonce("update_patient_tab3_nonce"); ?>">
+<input type="hidden" name="post_id" id="post_id" value="<?php echo get_the_ID(); ?>">
+<input type="hidden" name="action" value="update_patient_tab3">
+
+<div id="ajax_message"></div>
 
     <!-- start Ekstraoraalitutkimus -->
     <div class="col-lg-6">
@@ -175,14 +179,14 @@
                         <td>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="chkvahainenir" value="yl">
+                                    <input type="radio" name="rdovahainenir" value="yl">
                               </label>
                             </div>
                         </td>
                         <td>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="chkvahainenir" value="al">
+                                    <input type="radio" name="rdovahainenir" value="al">
                               </label>
                             </div>
                         </td>
@@ -196,14 +200,14 @@
                         <td>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="chknormaaliir" value="yl">
+                                    <input type="radio" name="rdonormaaliir" value="yl">
                               </label>
                             </div>
                         </td>
                         <td>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="chknormaaliir" value="al">
+                                    <input type="radio" name="rdonormaaliir" value="al">
                               </label>
                             </div>
                         </td>
@@ -217,14 +221,14 @@
                         <td>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="chkvoimakasir" value="yl">
+                                    <input type="radio" name="rdovoimakasir" value="yl">
                               </label>
                             </div>
                         </td>
                         <td>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="chkvoimakasir" value="al">
+                                    <input type="radio" name="rdovoimakasir" value="al">
                               </label>
                             </div>
                         </td>
@@ -238,14 +242,14 @@
                         <td>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="chkkiintealimakalvo" value="yl">
+                                    <input type="radio" name="rdokiintealimakalvo" value="yl">
                               </label>
                             </div>
                         </td>
                         <td>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="chkkiintealimakalvo" value="al">
+                                    <input type="radio" name="rdokiintealimakalvo" value="al">
                               </label>
                             </div>
                         </td>
@@ -259,14 +263,14 @@
                         <td>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="chkpaikallinenmuutos" value="yl">
+                                    <input type="radio" name="rdopaikallinenmuutos" value="yl">
                               </label>
                             </div>
                         </td>
                         <td>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="chkpaikallinenmuutos" value="al">
+                                    <input type="radio" name="rdopaikallinenmuutos" value="al">
                               </label>
                             </div>
                         </td>
@@ -280,14 +284,14 @@
                         <td>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="chklaajamuutos" value="yl">
+                                    <input type="radio" name="rdolaajamuutos" value="yl">
                               </label>
                             </div>
                         </td>
                         <td>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="chklaajamuutos" value="al">
+                                    <input type="radio" name="rdolaajamuutos" value="al">
                               </label>
                             </div>
                         </td>
@@ -301,14 +305,14 @@
                         <td>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="chktervelimakalvo" value="yl">
+                                    <input type="radio" name="rdotervelimakalvo" value="yl">
                               </label>
                             </div>
                         </td>
                         <td>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="chktervelimakalvo" value="al">
+                                    <input type="radio" name="rdotervelimakalvo" value="al">
                               </label>
                             </div>
                         </td>
@@ -322,14 +326,14 @@
                         <td>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="chkpaikallinenstomatiitti" value="yl">
+                                    <input type="radio" name="rdopaikallinenstomatiitti" value="yl">
                               </label>
                             </div>
                         </td>
                         <td>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="chkpaikallinenstomatiitti" value="al">
+                                    <input type="radio" name="rdopaikallinenstomatiitti" value="al">
                               </label>
                             </div>
                         </td>
@@ -343,14 +347,14 @@
                         <td>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="chkyleinenstomatiitti" value="yl">
+                                    <input type="radio" name="rdoleinenstomatiitti" value="yl">
                               </label>
                             </div>
                         </td>
                         <td>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="chkyleinenstomatiitti" value="al">
+                                    <input type="radio" name="rdoyleinenstomatiitti" value="al">
                               </label>
                             </div>
                         </td>
