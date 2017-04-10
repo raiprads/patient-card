@@ -5,13 +5,12 @@ Text Domain: jsm-show-post-meta
 Domain Path: /languages
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.txt
-Donate Link: https://www.paypal.me/jsmoriss
 Assets URI: https://jsmoriss.github.io/jsm-show-post-meta/assets/
 Tags: meta, post meta, custom fields, debug, tools
 Contributors: jsmoriss
 Requires At Least: 3.7
-Tested Up To: 4.7.1
-Stable Tag: 1.0.6-1
+Tested Up To: 4.7.3
+Stable Tag: 1.0.8
 
 Show all post meta (aka custom fields) keys and their unserialized values in a metabox on post editing pages.
 
@@ -93,65 +92,32 @@ See the plugin [Other Notes](https://wordpress.org/plugins/jsm-show-post-meta/ot
 * [GitHub](https://jsmoriss.github.io/jsm-show-post-meta/)
 * [WordPress.org](https://wordpress.org/plugins/jsm-show-post-meta/developers/)
 
-= Version Numbering Scheme =
+= Version Numbering =
 
-Version components: `{major}.{minor}.{bugfix}-{stage}{level}`
+Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
-* {major} = Major code changes / re-writes or significant feature changes.
-* {minor} = New features / options were added or improved.
-* {bugfix} = Bugfixes or minor improvements.
-* {stage}{level} = dev &lt; a (alpha) &lt; b (beta) &lt; rc (release candidate) &lt; # (production).
-
-Note that the production stage level can be incremented on occasion for simple text revisions and/or translation updates. See [PHP's version_compare()](http://php.net/manual/en/function.version-compare.php) documentation for additional information on "PHP-standardized" version numbering.
+* {major} = Major structural code changes / re-writes or incompatible API changes.
+* {minor} = New functionality was added or improved in a backwards-compatible manner.
+* {bugfix} = Backwards-compatible bug fixes or small improvements.
+* {stage}.{level} = Pre-production release: dev < a (alpha) < b (beta) < rc (release candidate).
 
 = Changelog / Release Notes =
 
-**Version 1.0.6-1 (2016/12/28)**
+**Version 1.0.8 (2017/04/08)**
 
 * *New Features*
 	* None
 * *Improvements*
-	* Highlighted new post meta rows added by the 'jsm_spm_post_meta' filters.
+	* None
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* None
-
-**Version 1.0.5-1 (2016/12/23)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* Added French translation of labels and notices.
-	* Updated CSS to scroll overflow of meta values.
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Maintenance release - minor refactoring of code.
-
-**Version 1.0.4-1 (2016/08/04)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* Added check for is_admin() before hooking actions and filters.
-	* Added 20% width in CSS for the key column.
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* None
+	* Maintenance release - update to version numbering scheme.
+	* Dropped the package number from the production version string.
 
 == Upgrade Notice ==
 
-= 1.0.6-1 =
+= 1.0.8 =
 
-(2016/12/28) Highlighted new post meta rows added by the 'jsm_spm_post_meta' filters.
-
-= 1.0.5-1 =
-
-(2016/12/23) Maintenance release - minor refactoring of code. Added French translation of labels and notices. Updated CSS to scroll overflow of meta values.
-
-= 1.0.4-1 =
-
-(2016/08/04) Added check for is_admin() before hooking actions and filters. Added 20% width in CSS for the key column.
+(2017/04/08) Maintenance release - update to version numbering scheme.
 

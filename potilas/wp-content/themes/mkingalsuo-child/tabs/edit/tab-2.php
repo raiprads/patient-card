@@ -87,7 +87,7 @@
             <label class="col-md-10 col-lg-10">Tarttuva tauti</label>
             <div class="col-md-2 col-lg-2"></div>
             <div class="col-md-8 col-lg-8">
-                <input class="form-control" id="txtttauti" name="txtttauti"
+                <input type="text" class="form-control" id="txtttauti" name="txtttauti"
 
                 value="<?php  echo mypost_meta_data(get_the_ID(), 'patient_txtttauti', '', true, $hash); ?>" 
 
@@ -106,7 +106,7 @@
             <label class="col-md-10 col-lg-10">Muut sairaudet</label>
             <div class="col-md-2 col-lg-2"></div>
             <div class="col-md-8 col-lg-8">
-                <input class="form-control" id="txtmsairaudet" name="txtmsairaudet"
+                <input type="text" class="form-control" id="txtmsairaudet" name="txtmsairaudet"
 
                 value="<?php  echo mypost_meta_data(get_the_ID(), 'patient_txtmsairaudet', "", true, $hash); ?>" 
                 >
@@ -124,7 +124,7 @@
             <label class="col-md-10 col-lg-10">Lääkitys</label>
             <div class="col-md-2 col-lg-2"></div>
             <div class="col-md-8 col-lg-8">
-                <input class="form-control" id="txtlaakitys" name="txtlaakitys"
+                <input type="text" class="form-control" id="txtlaakitys" name="txtlaakitys"
 
                 value="<?php  echo mypost_meta_data(get_the_ID(), 'patient_txtlaakitys', "", true, $hash); ?>" 
 
@@ -159,7 +159,7 @@
 
         <div class="form-group col-md-12 col-lg-12">
             <label>Vuosi <?php  echo mypost_meta_data(get_the_ID(), 'patient_txtvuosi', '', true, $hash); ?></label>
-            <input class="form-control" id="txtvuosi" name="txtvuosi" maxlength="4"
+            <input type="text" class="form-control" id="txtvuosi" name="txtvuosi" maxlength="4"
 
             value="<?php  echo mypost_meta_data(get_the_ID(), 'patient_txtvuosi', '', true, $hash); ?>"
 
@@ -203,7 +203,7 @@
         <div class="form-group col-md-4 col-lg-4">
             <div class="col-md-12 col-lg-12">
                 <label>Valmistettu v.</label>
-                <input class="form-control" id="txtvalmistettuv" name="txtvalmistettuv" maxlength="4"
+                <input type="text" class="form-control" id="txtvalmistettuv" name="txtvalmistettuv" maxlength="4"
 
                 value="<?php  echo mypost_meta_data(get_the_ID(), 'patient_txtvalmistettuv', "", true, $hash); ?>" 
 
@@ -215,7 +215,7 @@
         <div class="form-group col-md-4 col-lg-4">
             <div class="col-md-12 col-lg-12">
                 <label>Pohjattu v.</label>
-                <input class="form-control" id="txtpohjattuv" name="txtpohjattuv" maxlength="4"
+                <input type="text" class="form-control" id="txtpohjattuv" name="txtpohjattuv" maxlength="4"
 
                 value="<?php  echo mypost_meta_data(get_the_ID(), 'patient_txtpohjattuv', "", true, $hash); ?>" 
 
@@ -226,7 +226,7 @@
         <div class="form-group col-md-4 col-lg-4">
             <div class="col-md-12 col-lg-12">
                 <label>Korjattu v.</label>
-                <input class="form-control" id="txtkorjattuv" name="txtkorjattuv" maxlength="4"
+                <input type="text" class="form-control" id="txtkorjattuv" name="txtkorjattuv" maxlength="4"
 
                 value="<?php  echo mypost_meta_data(get_the_ID(), 'patient_txtkorjattuv', "", true, $hash); ?>"
 
@@ -300,7 +300,7 @@
         <div class="form-group col-md-6 col-lg-6">
             <div class="col-md-12 col-lg-12">
                 <label>Vapaaväli mm.</label>
-                <input class="form-control" id="txtvapaavalimm" name="txtvapaavalimm"
+                <input type="text" class="form-control" id="txtvapaavalimm" name="txtvapaavalimm"
 
                 value="<?php  echo mypost_meta_data(get_the_ID(), 'patient_txtvapaavalimm', "", true, $hash); ?>" 
 
@@ -311,7 +311,7 @@
         <div class="form-group col-md-6 col-lg-6">
             <div class="col-md-12 col-lg-12">
                 <label>Purentakorkeus mm.</label>
-                <input class="form-control" id="txtpurentakorkeusmm" name="txtpurentakorkeusmm"
+                <input type="text" class="form-control" id="txtpurentakorkeusmm" name="txtpurentakorkeusmm"
 
                 value="<?php  echo mypost_meta_data(get_the_ID(), 'patient_txtpurentakorkeusmm', "", true, $hash); ?>"
 
